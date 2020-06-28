@@ -1,7 +1,5 @@
 # End-To-End
 
-The main script of this repo is `main.py`.
-
 Most of the configuration is written in `config/config.yaml'
 
 * `predict_pretrain.py`: used to conduct the pretrain stage
