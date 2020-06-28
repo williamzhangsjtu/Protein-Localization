@@ -19,7 +19,7 @@ PyYAML==5.1.2
 
 The main script of this repo is `main.py` in each folder.
 
-Most of the configuration is written in `config/config.yaml' in each folder
+Most of the configuration is written in `config/config.yaml` in each folder
 
 * `./code`: contains code for single-instance and online method
 * `./end2end`: contains code for offline method
