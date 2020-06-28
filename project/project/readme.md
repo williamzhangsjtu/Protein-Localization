@@ -1,8 +1,3 @@
-./code contains code for single-instance and online method
-./end2end contains code for offline method
-./k_fold contains code for k fold cross validation
-
-
 # PREDICTION OF PROTEIN SUBCELLULAR LOCALIZATION BASED ON MICROSCOPICIMAGES
 
 Source code for CS385 project
