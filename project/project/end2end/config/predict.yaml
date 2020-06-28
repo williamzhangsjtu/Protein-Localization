@@ -1,0 +1,35 @@
+data_h5: pretrain_model/feature_256.hdf5
+train_dev: label/traindev_2.csv
+test: label/test_2.csv
+outputdir: predict/Transformer
+Net_lr: 0.00001
+other_lr: 0.00001
+model: TransformerFusion
+#model: MultiheadFusion
+pretrain: False
+#pretrain_model: baseline/densenet/2020-06-13_11-10-27/model_acc.th
+pretrain_dim: 256
+dataloader_param:
+  batch_size: 8
+  shuffle: True
+  num_workers: 8
+model_param:
+    n_layer: 1
+    nhead: 1
+    #num_heads : 4
+
+n_class: 10
+grad_clip: 10
+optim: Adam
+lr_scheduler: ReduceLROnPlateau
+Loss: BCELoss
+n_epoch: 100
+saveinterval: 20
+threshold: 0.5
+scheduler_param:
+  mode: min
+  factor: 0.3
+  patience: 5
+  cooldown: 1
+  verbose: False
+  threshold: 0.001

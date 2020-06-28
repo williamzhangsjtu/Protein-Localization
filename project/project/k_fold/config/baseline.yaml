@@ -1,0 +1,35 @@
+data_h5: ../code/data_256.h5
+train_dev: ../train.csv #fold_2/train_1.csv
+test: fold_2/test_1.csv
+outputdir: kfold2/fold_2
+Net: ../code/resnet_nofc.th
+pretrain_model: kfold/set_3/2020-06-26_07-29-16/model_acc.th
+pretrain: False
+Net_lr: 0.002
+other_lr: 0.002
+model: Resnet_eachlayer
+time_step: 1
+dataloader_param:
+  batch_size: 96
+  shuffle: True
+  num_workers: 16
+model_param:
+    Net_grad: True
+n_class: 10
+grad_clip: 
+optim: Adam
+lr_scheduler: ReduceLROnPlateau
+Loss: DoubleLoss
+Loss_param:
+    lambd: 0.5
+n_epoch: 100
+saveinterval: 5
+threshold: 0.5
+# scheduler_param:
+#   mode: min
+#   factor: 0.3
+#   patience: 5
+#   cooldown: 1
+#   verbose: False
+#   threshold: 0.001
+  

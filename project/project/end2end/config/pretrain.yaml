@@ -1,0 +1,36 @@
+#data_h5: ../code/data_512.h5
+data_h5: ../code/data_256.h5
+train_dev: label/traindev_2.csv
+test: label/test_2.csv
+outputdir: pretrain/256
+Net: ../code/resnet.th
+Net_lr: 0.008
+other_lr: 0.008
+#model: mask_pixel
+model: extractor_256
+pretrain: False
+#pretrain_model: baseline/densenet/2020-06-13_11-10-27/model_acc.th
+dataloader_param:
+  batch_size: 128
+  shuffle: True
+  num_workers: 16
+model_param:
+    Net_grad: True
+n_class: 10
+grad_clip: 
+optim: Adam
+lr_scheduler: ReduceLROnPlateau
+Loss: DoubleLoss
+Loss_param:
+    lambd: 1.0
+n_epoch: 100
+saveinterval: 20
+threshold: 0.5
+scheduler_param:
+  mode: min
+  factor: 0.3
+  patience: 5
+  cooldown: 1
+  verbose: False
+  threshold: 0.001
+  

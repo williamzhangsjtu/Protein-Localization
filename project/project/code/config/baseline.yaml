@@ -1,0 +1,41 @@
+data_h5: data_256.h5
+#data_h5: data.hdf5
+train_dev: label/traindev_2.csv
+test: label/test_2.csv
+#outputdir: baseline
+outputdir: resnet/resample
+Net: resnet_nofc.th
+#mrcnn: mrcnn.th
+Net_lr: 0.002
+other_lr: 0.002
+#model: Baseline
+pretrain: False
+model: Resnet_eachlayer
+time_step: 1
+dataloader_param:
+  batch_size: 128
+  shuffle: True
+  num_workers: 16
+model_param:
+    Net_grad: True
+    #n_layer: 1
+    #nhead: 1
+n_class: 10
+grad_clip: 
+optim: Adam
+lr_scheduler: ReduceLROnPlateau
+#Loss: BCELoss
+Loss: DoubleLoss
+Loss_param:
+    lambd: 0.5
+n_epoch: 100
+saveinterval: 20
+threshold: 0.5
+scheduler_param:
+  mode: min
+  factor: 0.3
+  patience: 5
+  cooldown: 1
+  verbose: False
+  threshold: 0.001
+  
