@@ -21,7 +21,6 @@ The main script of this repo is `main.py` in each folder.
 
 Most of the configuration is written in `config/config.yaml' in each folder
 
-`run.py` the following options ( ran as `python run.py OPTION`):
 * `./code`: contains code for single-instance and online method
 * `./end2end`: contains code for offline method
 * `./k_fold`: contains code for k fold cross validation
