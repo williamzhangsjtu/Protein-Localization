@@ -1,7 +1,8 @@
+#End-To-End
 
 The main script of this repo is `main.py`.
 
-Most of the configuration is written in `config/config.yaml' in each folder
+Most of the configuration is written in `config/config.yaml'
 
 * `predict_pretrain.py`: used to conduct the pretrain stage
 * `extract_features.py`: used to extract features from the pretrained backbone network
