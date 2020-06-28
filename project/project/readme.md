@@ -5,8 +5,6 @@ Source code for CS385 project
 
 # Prequisites
 
-The required python packages can be found in `requirements.txt`.
-
 ```
 torch==1.2.0
 numpy==1.16.4
